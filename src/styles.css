@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@plugin "daisyui" {
+  themes: harmony --default;
+}
+
+@plugin "daisyui/theme" {
+  name: "harmony";
+  default: true;
+  prefersdark: false;
+  color-scheme: light;
+
+  --color-base-100: #f8edd7;
+  --color-base-200: #efdfc4;
+  --color-base-300: #dfccab;
+  --color-base-content: #2b2320;
+
+  --color-primary: #8aa043;
+  --color-primary-content: #11160a;
+  --color-secondary: #4e79af;
+  --color-secondary-content: #ecf5ff;
+  --color-accent: #e0b23e;
+  --color-accent-content: #2d2207;
+  --color-neutral: #3a2f35;
+  --color-neutral-content: #f8f1eb;
+
+  --color-info: #4e79af;
+  --color-success: #7d9c48;
+  --color-warning: #e0b23e;
+  --color-error: #d3665f;
+
+  --radius-selector: 0.5rem;
+  --radius-field: 0.5rem;
+  --radius-box: 0.75rem;
+  --size-selector: 0.25rem;
+  --size-field: 0.25rem;
+  --border: 1px;
+  --depth: 0;
+  --noise: 0;
+}
+
+@layer base {
+  body {
+    background:
+      radial-gradient(circle at 10% 10%, rgb(255 255 255 / 35%), transparent 45%),
+      radial-gradient(circle at 90% 20%, rgb(224 178 62 / 24%), transparent 40%),
+      linear-gradient(180deg, var(--color-base-200), var(--color-base-100));
+    color: var(--color-base-content);
+  }
+}
+
+@layer components {
+  .scorecard-card {
+    border-top: 4px solid var(--category-accent, var(--color-base-300));
+  }
+
+  .scorecard-category {
+    --category-accent: var(--color-base-300);
+  }
+
+  .scorecard-category-trees {
+    --category-accent: #8aa043;
+  }
+
+  .scorecard-category-mountains {
+    --category-accent: #93a1b5;
+  }
+
+  .scorecard-category-fields {
+    --category-accent: #e0b23e;
+  }
+
+  .scorecard-category-buildings {
+    --category-accent: #c85e74;
+  }
+
+  .scorecard-category-rivers {
+    --category-accent: #4e79af;
+  }
+
+  .scorecard-category-animals {
+    --category-accent: #3a2f35;
+  }
+
+  .scorecard-icon {
+    border: 1px solid color-mix(in oklab, var(--category-accent) 70%, black);
+    background: color-mix(in oklab, var(--category-accent) 18%, white);
+  }
+
+  .scorecard-points-badge {
+    border-color: color-mix(in oklab, var(--category-accent) 55%, transparent);
+    background: color-mix(in oklab, var(--category-accent) 20%, white);
+    color: color-mix(in oklab, var(--category-accent) 70%, black);
+  }
+}
