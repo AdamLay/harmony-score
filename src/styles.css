@@ -83,12 +83,13 @@
 
   .scorecard-icon {
     //border: 1px solid color-mix(in oklab, var(--category-accent) 70%, black);
-    background: color-mix(in oklab, var(--category-accent) 18%, white);
+    //background: color-mix(in oklab, var(--category-accent) 18%, white);
   }
 
   .scorecard-points-badge {
-    border-color: color-mix(in oklab, var(--category-accent) 55%, transparent);
-    background: color-mix(in oklab, var(--category-accent) 20%, white);
+    border-color: color-mix(in oklab, var(--category-accent) 55%, transparent) !important;
+    background: color-mix(in oklab, var(--category-accent) 80%, white) !important;
+    //background-color: var(--category-accent) !important;
     color: color-mix(in oklab, var(--category-accent) 70%, black);
   }
 }

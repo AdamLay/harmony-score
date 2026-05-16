@@ -7,8 +7,8 @@ export function TotalScorePanel() {
     <div className="card mt-6 border border-base-300 bg-base-100 shadow-sm">
       <div className="card-body flex-col gap-4 p-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="stats bg-base-200 shadow-none">
-          <div className="stat px-4 py-2">
-            <div className="stat-title">Total</div>
+          <div className="stat px-4 py-2 flex">
+            <div className="stat-title text-lg flex-1">Total</div>
             <div className="stat-value text-4xl">{totalScore}</div>
           </div>
         </div>

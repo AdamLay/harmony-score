@@ -12,6 +12,7 @@ export function AnimalsScoreCard() {
       onChange={setAnimalPoints}
       points={animalsScore}
       inputLabel="Points"
+      iconSrc="/icons/animals.png"
       categoryClass="scorecard-category scorecard-category-animals"
     />
   );
