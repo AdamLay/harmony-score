@@ -1,3 +1,4 @@
+import PointsBadge from "./PointsBadge";
 import { parsePointsInput, type Tier, type TierCounts } from "./scorecard-context";
 
 const TIER_OPTIONS: Tier[] = [1, 3, 7];
@@ -22,7 +23,7 @@ export function TieredScoreCard({
       <div className="card-body gap-3 p-4">
         <div className="flex items-start gap-3">
           {iconSrc ? (
-            <img src={iconSrc} alt="" aria-hidden="true" className="scorecard-icon h-8 w-8 rounded-full object-cover" />
+            <img src={iconSrc} alt="" aria-hidden="true" className="scorecard-icon h-12 w-12 rounded-full object-cover" />
           ) : null}
           <div>
             <h2 className="card-title text-base">{label}</h2>
@@ -66,9 +67,7 @@ export function TieredScoreCard({
             </label>
           ))}
         </div>
-        <div className="mt-1">
-          <span className="badge badge-outline scorecard-points-badge">Points: {points}</span>
-        </div>
+        <PointsBadge points={points} />
       </div>
     </section>
   );

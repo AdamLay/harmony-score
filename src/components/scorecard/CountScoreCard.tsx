@@ -24,7 +24,7 @@ export function CountScoreCard({
       <div className="card-body gap-3 p-4">
         <div className="flex items-start gap-3">
           {iconSrc ? (
-            <img src={iconSrc} alt="" aria-hidden="true" className="scorecard-icon h-8 w-8 rounded-full object-cover" />
+            <img src={iconSrc} alt="" aria-hidden="true" className="scorecard-icon h-12 w-12 rounded-full object-cover" />
           ) : null}
           <div>
             <h2 className="card-title text-base">{label}</h2>
