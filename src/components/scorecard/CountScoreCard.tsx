@@ -36,7 +36,7 @@ export function CountScoreCard({
           ) : null}
           <div>
             <h2 className="card-title text-base">{label}</h2>
-            <p className="text-xs text-base-content/70">{helper}</p>
+            <p className="text-xs text-base-content/70">{helper}.</p>
           </div>
         </div>
 

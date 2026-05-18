@@ -1,11 +1,10 @@
-import { defineConfig } from "vite-plus";
 import { devtools } from "@tanstack/devtools-vite";
-import tsconfigPaths from "vite-tsconfig-paths";
+import { defineConfig } from "vite-plus";
 
 import { tanstackStart } from "@tanstack/react-start/plugin/vite";
 
-import viteReact from "@vitejs/plugin-react";
 import tailwindcss from "@tailwindcss/vite";
+import viteReact from "@vitejs/plugin-react";
 import { nitro } from "nitro/vite";
 
 const config = defineConfig({
@@ -13,11 +12,13 @@ const config = defineConfig({
     "*": "vp check --fix",
   },
   fmt: {},
+  resolve: {
+    tsconfigPaths: true,
+  },
   lint: { options: { typeAware: true, typeCheck: true } },
   plugins: [
     devtools(),
     nitro({ rollupConfig: { external: [/^@sentry\//] } }),
-    tsconfigPaths({ projects: ["./tsconfig.json"] }),
     tailwindcss(),
     tanstackStart(),
     viteReact(),

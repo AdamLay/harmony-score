@@ -34,9 +34,7 @@ export function TieredScoreCard({
           ) : null}
           <div>
             <h2 className="card-title text-base">{label}</h2>
-            <p className="text-xs text-base-content/70">
-              Enter how many 1-, 3-, and 7-point scores were earned.
-            </p>
+            <p className="text-xs text-base-content/70">Enter 1, 3, and 7 point scores.</p>
           </div>
         </div>
         <div className="grid gap-2">
