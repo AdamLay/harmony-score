@@ -61,16 +61,14 @@ export function RiversScoreCard() {
                   +
                 </button>
               </div>
-              {riverLengths.length > 1 && (
-                <button
-                  type="button"
-                  aria-label={`Remove river ${index + 1}`}
-                  onClick={() => removeRiver(index)}
-                  className="btn btn-ghost btn-sm h-10 min-h-10 w-10 rounded-field border border-base-300 px-0 text-base text-error"
-                >
-                  ✕
-                </button>
-              )}
+              <button
+                type="button"
+                aria-label={`Remove river ${index + 1}`}
+                onClick={() => removeRiver(index)}
+                className="btn btn-ghost btn-sm h-10 min-h-10 w-10 rounded-field border border-base-300 px-0 text-base text-error"
+              >
+                ✕
+              </button>
             </div>
           ))}
         </div>
